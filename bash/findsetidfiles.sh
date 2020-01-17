@@ -19,6 +19,7 @@
 # use the find command to generate the list of files with their sizes, with an error redirect to /dev/null
 # use cut or awk to display only the output desired
 
+#Here is my honest attempt at assignment 1. I feel lost however, with the help of google and notes from previous classes i will give my best effort!
 echo "Setuid files:"
 echo "============="
 find / -type f -executable -perm -4000 -ls 2>/dev/null | sort -k 3
