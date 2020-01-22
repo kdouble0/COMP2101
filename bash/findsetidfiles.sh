@@ -32,5 +32,5 @@ echo ""
 
 echo "Setgid files:"
 echo "============="
-find / -type f -executable -perm -2000 ls '--block=M'>/dev/null | sort -k 3 | head -n 10
+find / -type f -executable -perm -2000 --block=M>/dev/null | sort -k 3 | head -n 10
 echo ""
