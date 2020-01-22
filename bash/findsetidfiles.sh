@@ -30,7 +30,7 @@ echo "============="
 find / -type f -executable -perm -2000 -ls 2>/dev/null | sort -k 3
 echo ""
 
-echo "Setuid files:"
+echo "Setgid files:"
 echo "============="
 find / -type f -executable -perm -2000 -ls 2>/dev/null | sort -k 3 | head -n 10
 echo ""
