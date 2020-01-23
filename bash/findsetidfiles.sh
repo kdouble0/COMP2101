@@ -32,5 +32,6 @@ echo ""
 
 echo "Setgid files_MB:"
 echo "============="
-find / -type f /exec ls -lsh --block-size=M  {} + 2>/dev/null | sort -nr 3 | head 10 | awk '{$2=$3=5=$6=$7=$8=$9""; print $0}'
+find -type f -exec ls -alh --block-size=M {} \; | sort -hr -k5 | head -n 10 | awk '{print $5, $3 ,$9}'
+
 echo ""
