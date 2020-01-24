@@ -24,7 +24,7 @@ test -f ~/Pictures/pics.zip && unzip -d ~/Pictures -o -q ~/Pictures/pics.zip && 
 test -f ~/Pictures/pics.tgz || wget -q -O ~/Pictures/pics.tgz http://zonzorp.net/pics.tgz
 
 ##########################################
-# This script will unpack the tar file and then delete local copy
+# This script will unpack the tar file and then delete local copy in the Pictures directory
 
 test -f ~/Pictures/pics.tgz && tar -C ~/Pictures -xzf ~/Pictures/pics.tgz && rm ~/Pictures/pics.tgz
 
@@ -33,3 +33,6 @@ test -d ~/Pictures && cat <<EOF
 Found $(find ~/Pictures -type f|wc -l) files in the Pictures directory.
 The Pictures directory uses $(du -sh ~/Pictures|awk '{print $1}') space on the disk.
 EOF
+
+
+#script complete
