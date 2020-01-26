@@ -22,11 +22,13 @@ $(( RANDOM % 6 + 1)) rolled
 
 echo "
 You are rolling 5 six-sided dice...
-$(( RANDOM % 6 + 1))
-$(( RANDOM % 6 + 1))
-$(( RANDOM % 6 + 1))
-$(( RANDOM % 6 + 1))
-$(( RANDOM % 6 + 1)) 
+
+dice 1 - $(( RANDOM % 6 + 1))
+dice 2 - $(( RANDOM % 6 + 1))
+dice 3 - $(( RANDOM % 6 + 1))
+dice 4 - $(( RANDOM % 6 + 1))
+dice 5 - $(( RANDOM % 6 + 1)) 
+
 rolled
 "
 
