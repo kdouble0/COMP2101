@@ -5,8 +5,20 @@
 
 # Task 1:
 #  put the number of sides in a variable which is used as the range for the random number
+diesidesmax=6
+
+
+
 #  put the bias, or minimum value for the generated number in another variable
+diesidesmin=1
+
+
 #  roll the dice using the variables for the range and bias i.e. RANDOM % range + bias
+echo "
+You are rolling a six-sided dice...
+$(( RANDOM %  $diesidesmax + $diesidesmin )) rolled
+"
+
 
 # Task 2:
 #  generate the sum of the dice
