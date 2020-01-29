@@ -27,16 +27,15 @@ dice 1 - $(( RANDOM % 6 + 1))
 dice 2 - $(( RANDOM % 6 + 1))
 dice 3 - $(( RANDOM % 6 + 1))
 dice 4 - $(( RANDOM % 6 + 1))
-dice 5 - $(( RANDOM % 6 + 1)) 
+dice 5 - $(( RANDOM % 6 + 1))
 
 rolled
 "
 
-
-
-
-
-
-
 #######################################
 #Modify the script to add rolling one 20-sided die
+
+echo "
+You are rolling a one 20-sided die...
+$(( RANDOM % 20 + 1)) rolled
+"
