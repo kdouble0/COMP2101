@@ -15,15 +15,24 @@ diesidesmin=1
 
 #  roll the dice using the variables for the range and bias i.e. RANDOM % range + bias
 echo "
-You are rolling a six-sided dice...
+You are rollinga pair of six-sided dice...
+$(( RANDOM %  $diesidesmax + $diesidesmin )) rolled
 $(( RANDOM %  $diesidesmax + $diesidesmin )) rolled
 "
 
 
 # Task 2:
 #  generate the sum of the dice
-#  generate the average of the dice
+die1=$(( RANDOM % 6 + 1))
+die2=$(( RANDOM % 6 + 1 ))
+sum=$((die1+die2))
+echo "The sum of your roll is $sum"
 
+#  generate the average of the dice
+die1=$(( RANDOM % 6 + 1))
+die2=$(( RANDOM % 6 + 1 ))
+avg=$((die1/die2))
+echo "The average of your roll is $avg"
 #  display a summary of what was rolled, and what the results of your arithmetic were
 
 # Tell the user we have started processing
