@@ -47,5 +47,8 @@ EOF
 
 ###Modify it to store the output in a variable instead of displaying it on the screen directly
 #Use the cowsay command to display to variable containing your output
-welcomeMessageO=$(~/COMP2101/bash/login-welcome.sh)
+welcomeMessageO="Welcome to planet $hostname, $title $USER
+
+It is $weekday at $date."
+
 cowsay $welcomeMessageO
