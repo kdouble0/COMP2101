@@ -47,5 +47,5 @@ EOF
 
 ###Modify it to store the output in a variable instead of displaying it on the screen directly
 #Use the cowsay command to display to variable containing your output
-welcomeMessageOut=$(~/COMP2101/bash/welcome-message.sh)
-cowsay $welcomeMessageOut
+welcomeMessageO=$(~/COMP2101/bash/login-welcome.sh)
+cowsay $welcomeMessageO
