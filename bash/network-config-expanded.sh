@@ -20,7 +20,7 @@
 # the first part is run once to get information about the host
 # grep is used to filter ip command output so we don't have extra junk in our output
 # stream editing with sed and awk are used to extract only the data we want displayed
-
+#
 #####
 # Once per host report
 #####

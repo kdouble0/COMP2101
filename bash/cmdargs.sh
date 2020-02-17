@@ -20,28 +20,36 @@ myargs+=("$1")
 #             display an error if the user gave the -d option without a single digit number after it
 #          Anything that wasn't recognized on the command line should still go into the myargs array
   case $1 in
-    -h)
+    -h | --help)
+    shift
     #          If the help option is recognized, print out help for the command and exit
     echo "You have selected Help mode"
+    exit
     ;;
-    -v)
+
 #          If the verbose option is recognized, set a variable to indicate verbose mode is on
-    echo "You have selected Verbose Mode"
+    -v | --verbose )
+      shift
+    echo "You have selected Verbose mode"
+    exit
     ;;
-    -d )
-    case "$2" in
-      [1-5] )
-      echo "You have added the -d for debug level $2"
-      shift
-      ;;
-      *)
-      echo "This option -d must be followed by a number that is between [1-5]"
-      shift
-    esac
+    -d | --debug )
+          if [ ! -z $2 ] && [ $2 -ge 0 ]
+          then
+            echo "You have added the -d for debug level $2"
+            shift
+            exit
+      else
+        shift
+        echo "This option -d must be followed by a number that is between [1-5]"
+        exit
+      fi
   ;;
   *)
+  shift
   error=$1
   echo "Invalid value $error"
+  exit
   ;;
   esac
 
